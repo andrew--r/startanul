@@ -1,0 +1,53 @@
+{
+  "name": "startanul",
+  "version": "1.0.0",
+  "description": "A starter kit for layout building",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrew Romanov",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.4.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babelify": "^7.2.0",
+    "browser-sync": "^2.11.0",
+    "browserify": "^13.0.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-cached": "^1.1.0",
+    "gulp-combine-media-queries": "^0.2.0",
+    "gulp-combine-mq": "^0.4.0",
+    "gulp-filter": "^3.0.1",
+    "gulp-html-prettify": "0.0.1",
+    "gulp-if": "^2.0.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-jade-inheritance": "^0.5.4",
+    "gulp-minify-css": "^1.2.3",
+    "gulp-plumber": "^1.0.1",
+    "gulp-postcss": "^6.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-stylus": "^2.2.0",
+    "gulp-uglify": "^1.5.1",
+    "gulp-util": "^3.0.7",
+    "postcss-flexbugs-fixes": "^2.0.0",
+    "postcss-inline-svg": "^1.3.0",
+    "postcss-svg": "^1.0.4",
+    "require-dir": "^0.3.0",
+    "run-sequence": "^1.1.5",
+    "rupture": "^0.6.1",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.7.0"
+  },
+  "browsers": {
+    "android": 4,
+    "chrome": 42,
+    "firefox": 37,
+    "ie": 10,
+    "ios": 7,
+    "opera": 28,
+    "safari": 7
+  }
+}
