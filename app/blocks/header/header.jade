@@ -1,2 +1,50 @@
+include ../popup/popup
+
 mixin header()
-	.header&attributes(attributes)
+  .header&attributes(attributes)
+    .header__inner
+      .header__left
+        .header__logo
+          img(src='assets/images/logo.svg' alt='Логотип Nupi')
+        .header__title Программный комплекс
+      .header__right
+        .header__phone
+          .header__phone-text +7 #[span(style='display: none;') —](3812) 347-500
+          +popup('Заказать звонок')(class='popup--callback')
+            form(action='')
+              .popup__group
+                label(for='popup-name') Имя
+                input(type='text' id='popup-name' required='true')
+              .popup__group
+                label(for='popup-phone') Телефон
+                input(type='text' id='popup-phone' class='js-phone' required='true' placeholder='+7 (___) ___-__-__')
+
+              .popup__submit
+                input.btn(type='submit' value='Заказать')
+
+        .header__avatar
+          .header__avatar-icon
+          +popup('Вход в личный кабинет')(class='popup--login')
+            form(action='')
+              .popup__group
+                label(for='popup-login') Логин
+                input(type='text' id='popup-login' required='true')
+              .popup__group
+                label(for='popup-password') Пароль
+                input(type='password' id='popup-password' required='true')
+
+              .popup__remind
+                .popup__remind-inner
+                  p Забыли пароль?
+                  a(href=jv0) Восстановить доступ
+
+              .popup__submit
+                input.btn(type='submit' value='Заказать')
+          //- +popup('Восстановить доступ')(class='popup--login')
+          //-   form(action='')
+          //-     .popup__group
+          //-       label(for='popup-email') Email
+          //-       input(type='text' id='popup-email' required='true')
+
+          //-     .popup__submit
+          //-       input.btn(type='submit' value='Восстановить')

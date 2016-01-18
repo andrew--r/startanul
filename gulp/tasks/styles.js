@@ -4,7 +4,7 @@ import rupture      from 'rupture';
 import stylus       from 'gulp-stylus';
 import postcss      from 'gulp-postcss';
 import autoprefixer from 'gulp-autoprefixer';
-import svg          from 'postcss-inline-svg';
+import svg          from 'postcss-svg';
 import flexfixes    from 'postcss-flexbugs-fixes';
 import cmq          from 'gulp-combine-mq';
 import minifyCss    from 'gulp-minify-css';
@@ -34,7 +34,7 @@ gulp.task('styles', () => {
 		))
 		.pipe(postcss([
 			svg({
-				path: paths.src.svg
+				paths: [paths.src.svg]
 			}),
 			flexfixes()
 		]))

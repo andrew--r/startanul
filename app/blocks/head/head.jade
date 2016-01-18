@@ -1,5 +1,6 @@
 head
   meta(charset='utf-8')
+  meta(name='viewport' content='width=1024px, initial-scale=0.1, minimal-ui')
   meta(http-equiv='X-UA-Compatible' content='IE=edge')
 
   meta(name='imagetoolbar' content='no')
@@ -17,8 +18,11 @@ head
   title= pageTitle || 'Заголовок страницы'
   
 
-  // Cтили
-  link(href='assets/styles/main.min.css?t=' + timestamp rel='stylesheet')
+  // Базовые стили
+  link(href='assets/styles/core.min.css?t=' + timestamp rel='stylesheet')
+
+  // Стили страницы
+  link(href='assets/styles/' + pageName + '.min.css?t=' + timestamp rel='stylesheet')
 
   // Шрифты
   link(href='https://fonts.googleapis.com/css?family=Roboto:400,300&subset=latin,cyrillic' rel='stylesheet')
