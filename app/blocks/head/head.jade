@@ -17,12 +17,7 @@ head
   block head
   title= pageTitle || 'Заголовок страницы'
   
-
-  // Базовые стили
-  link(href='assets/styles/core.min.css?t=' + timestamp rel='stylesheet')
-
-  // Стили страницы
-  link(href='assets/styles/' + pageName + '.min.css?t=' + timestamp rel='stylesheet')
+  link(href='assets/styles/main.min.css?t=' + timestamp rel='stylesheet')
 
   // Шрифты
   link(href='https://fonts.googleapis.com/css?family=Roboto:400,300&subset=latin,cyrillic' rel='stylesheet')
