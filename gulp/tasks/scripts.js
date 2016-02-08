@@ -8,12 +8,12 @@ import errorHandler from '../utils/errorHandler';
 import paths        from '../paths';
 
 gulp.task('scripts', () => {
-  let bundler = browserify(`${paths.src.scripts}/main.js`, { debug: true }).transform(babel);
-  return bundler
-    .bundle()
-    .on('error', function(err) { console.error(err); this.emit('end'); })
-    .pipe(source('build.js'))
-    .pipe(buffer())
-    .pipe(uglify())
-    .pipe(gulp.dest(paths.dist.scripts));
+	let bundler = browserify(`${paths.src.scripts}/main.js`, { debug: true }).transform(babel);
+	return bundler
+		.bundle()
+		.on('error', function(err) { console.error(err); this.emit('end'); })
+		.pipe(source('build.js'))
+		.pipe(buffer())
+		.pipe(uglify())
+		.pipe(gulp.dest(paths.dist.scripts));
 });

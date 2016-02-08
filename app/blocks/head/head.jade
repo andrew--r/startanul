@@ -1,23 +1,20 @@
 head
-  meta(charset='utf-8')
-  meta(name='viewport' content='width=1024px, initial-scale=0.1, minimal-ui')
-  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+	meta(charset='utf-8')
+	meta(name='viewport' content='width=device-width, initial-scale=1, minimal-ui')
+	meta(http-equiv='X-UA-Compatible' content='IE=edge')
 
-  meta(name='imagetoolbar' content='no')
-  meta(name='msthemecompatible' content='no')
-  meta(name='cleartype' content='on')
-  meta(name='HandheldFriendly' content='True')
-  meta(name='google' value='notranslate')
+	meta(name='imagetoolbar' content='no')
+	meta(name='msthemecompatible' content='no')
+	meta(name='cleartype' content='on')
+	meta(name='HandheldFriendly' content='True')
+	meta(name='google' value='notranslate')
 
-  link(rel='shortcut icon' type='image/png' href='favicon.png')
+	link(rel='shortcut icon' type='image/png' href='favicon.png')
 
-  meta(name='description' content='')
-  meta(name='keywords' content='')
+	meta(name='description' content='')
+	meta(name='keywords' content='')
 
-  block head
-  title= pageTitle || 'Заголовок страницы'
-  
-  link(href='assets/styles/main.min.css?t=' + timestamp rel='stylesheet')
-
-  // Шрифты
-  link(href='https://fonts.googleapis.com/css?family=Roboto:400,300&subset=latin,cyrillic' rel='stylesheet')
+	block head
+	title= pageTitle || 'Заголовок страницы'
+	
+	link(href='assets/styles/main.min.css?t=' + timestamp rel='stylesheet')
