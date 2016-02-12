@@ -4,21 +4,25 @@ container($width)
 	margin-left auto
 	margin-right auto
 
+
 // Размеры элемента
 size($width, $height = $width)
 	width $width
 	height $height
+
 
 // Центрирование по горизонтали
 center()
 	margin-right auto
 	margin-left auto
 
+
 // Центрирование абсолютно позиционированного элемента по вертикали
 absolute-center()
 	position absolute
 	top 50%
 	transform translateY(-50%)
+
 
 // Сброс обтекания для плавающих блоков-потомков
 clearfix()
@@ -29,6 +33,7 @@ clearfix()
 
 	&:after
 		clear both
+
 
 // Применяется к родительскому блоку, в который вложено n inline-block потомков.
 // Эти потомки будут распределены по ширине родительского блока
@@ -53,15 +58,17 @@ justify()
 
 		content ''
 
+
 // Применяется к inline-block элементам, вложенным в родителя с применённым justify.
 // Следует указать нужный размер шрифта в блоках, так как в justify он сбрасывается
 justify-child(font-size = 16px)
+	display inline-block
+	vertical-align top
+	
 	font-size font-size
 	line-height normal
+	
 
-	display inline-block
-
-	vertical-align top
 
 // Красивое обрезание лишнего текста
 text-overflow()
@@ -69,11 +76,13 @@ text-overflow()
 	white-space nowrap
 	text-overflow ellipsis
 
+
 // Скрытие текста у блока
 hidetext()
 	font 0/0 a
 	text-shadow none
 	color transparent
+
 
 // Запрет выделения текста
 noselection()
@@ -82,6 +91,7 @@ noselection()
 
 	&:hover
 		cursor default
+
 
 // Задаёт цвет плейсхолдера
 placeholder-color(color)
@@ -93,27 +103,11 @@ placeholder-color(color)
 	&::-webkit-input-placeholder
 		color color
 
+
 // Хак для включения аппаратного ускорения.
 // Поддержка браузерами: IE10+
 gpu()
 	transform translate3d(0, 0, 0)
-
-// Сброс стандартных стилей у списков.
-// Полезно при вёрстке различных меню
-clearlist($fsize = 1rem)
-	padding 0
-	margin 0
-	list-style none
-	font-size 0
-	
-	li
-		display inline-block
-		font-size $fsize
-
-// Размер шрифта в rem с фоллбэком в px
-rems(value)
-	font-size value
-	font-size unit(value/16, 'rem')
 
 
 // Фоновая картинка
