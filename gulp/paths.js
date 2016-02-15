@@ -5,12 +5,14 @@ export default {
 	src: {
 		styles: './app/styles',
 		svg: './app/svg',
-		scripts: './app/scripts'
+		scripts: './app/scripts',
+		static: './app/static',
 	},
 
 	dist: {
 		styles: './dist/assets/styles',
 		images: './dist/assets/images',
-		scripts: './dist/assets/scripts'
+		scripts: './dist/assets/scripts',
+		static: './dist/assets',
 	},
 };

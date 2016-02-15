@@ -2,22 +2,26 @@
   "name": "startanul",
   "version": "1.0.0",
   "description": "A starter kit for layout building",
-  "main": "index.js",
+  "main": "./app/scripts/main.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andrew--r/startanul.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Andrew Romanov",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.4.0",
     "babel-preset-es2015": "^6.3.13",
     "babelify": "^7.2.0",
     "browser-sync": "^2.11.0",
     "browserify": "^13.0.0",
+    "del": "^2.2.0",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-cached": "^1.1.0",
-    "gulp-combine-media-queries": "^0.2.0",
     "gulp-combine-mq": "^0.4.0",
     "gulp-filter": "^3.0.1",
     "gulp-html-prettify": "0.0.1",
@@ -31,6 +35,8 @@
     "gulp-stylus": "^2.2.0",
     "gulp-uglify": "^1.5.1",
     "gulp-util": "^3.0.7",
+    "gulp-watch": "^4.3.5",
+    "gulp-zip": "^3.1.0",
     "postcss-flexbugs-fixes": "^2.0.0",
     "postcss-inline-svg": "^1.3.0",
     "postcss-svg": "^1.0.4",
@@ -38,6 +44,7 @@
     "run-sequence": "^1.1.5",
     "rupture": "^0.6.1",
     "vinyl-buffer": "^1.0.0",
+    "vinyl-paths": "^2.1.0",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.7.0"
   },

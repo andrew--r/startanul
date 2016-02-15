@@ -14,7 +14,8 @@ import paths        from '../paths';
 import { browsers } from '../../package.json';
 
 gulp.task('styles', () => {
-	return gulp.src('*.styl', {
+	return gulp
+		.src('*.styl', {
 			cwd: paths.src.styles,
 			nonull: true
 		})

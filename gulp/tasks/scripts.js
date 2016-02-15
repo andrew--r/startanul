@@ -7,7 +7,7 @@ import babel        from 'babelify';
 import errorHandler from '../utils/errorHandler';
 import paths        from '../paths';
 
-gulp.task('scripts', () => {
+gulp.task('scripts:compile', () => {
 	let bundler = browserify(`${paths.src.scripts}/main.js`, { debug: true }).transform(babel);
 	return bundler
 		.bundle()
@@ -16,4 +16,10 @@ gulp.task('scripts', () => {
 		.pipe(buffer())
 		.pipe(uglify())
 		.pipe(gulp.dest(paths.dist.scripts));
+});
+
+gulp.task('scripts:copy', () => {
+	return gulp
+		.src(`${paths.src.scripts}/vendor/*.js`)
+		.pipe(gulp.dest(`${paths.dist.scripts}/vendor`));
 });

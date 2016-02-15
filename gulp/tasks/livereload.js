@@ -3,7 +3,7 @@ import gulp        from 'gulp';
 import gutil       from 'gulp-util';
 import paths       from '../paths';
 
-gulp.task('livereload', () => (
+gulp.task('livereload', () => {
 	browserSync.init({
 		files: [`${paths.baseDist}/**/*`],
 		open: !!gutil.env.open,
@@ -18,4 +18,4 @@ gulp.task('livereload', () => (
 		},
 		tunnel: !!gutil.env.tunnel
 	})
-));
+});

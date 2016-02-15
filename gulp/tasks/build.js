@@ -1,7 +1,7 @@
-import gulp from 'gulp';
+import gulp        from 'gulp';
 import runSequence from 'run-sequence';
 
-gulp.task('default', () => {
+gulp.task('build', ['clean'], () => {
 	runSequence([
 			'markup',
 			'styles',
@@ -9,7 +9,6 @@ gulp.task('default', () => {
 			'scripts:copy',
 			'static',
 		],
-		'livereload',
-		'watch'
+		'zip'
 	);
 });
