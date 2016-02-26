@@ -1,13 +1,7 @@
-include ../blocks/header/header
-include ../blocks/footer/footer
+extends ../layouts/main
 
-doctype html
-html(lang='ru')
-	block head
-		- var pageTitle = 'Главная'
-	include ../blocks/head/head
-	body
-		+header()
-		+footer()
-		
-		script(src='assets/scripts/build.js')
+block head
+	- var pageTitle = 'Главная';
+
+block content
+	

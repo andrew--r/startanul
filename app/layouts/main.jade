@@ -1,0 +1,12 @@
+include ../blocks/header/header
+include ../blocks/footer/footer
+
+doctype html
+html(lang='ru')
+	include ../blocks/head/head
+	body
+		+header()
+		block content
+		+footer()
+		
+		script(src='assets/scripts/build.js')

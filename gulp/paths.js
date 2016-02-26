@@ -10,9 +10,9 @@ export default {
 	},
 
 	dist: {
-		styles: './dist/assets/styles',
-		images: './dist/assets/images',
+		styles:  './dist/assets/styles',
+		images:  './dist/assets/images',
 		scripts: './dist/assets/scripts',
-		static: './dist/assets',
+		static:  './dist/assets',
 	},
 };

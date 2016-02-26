@@ -12,7 +12,7 @@ gulp.task('watch', () => {
 		runSequence('styles', reload.bind(null, `${paths.dist.styles}/app.min.css`));
 	});
 
-	watch(`${paths.baseSrc}/{pages,blocks}/**/*.jade`, () => {
+	watch(`${paths.baseSrc}/{layouts,pages,blocks}/**/*.jade`, () => {
 		runSequence('markup', reload);
 	});
 
