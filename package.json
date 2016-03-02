@@ -56,5 +56,8 @@
     "ios": 7,
     "opera": 28,
     "safari": 7
+  },
+  "dependencies": {
+    "bemto.jade": "^1.0.2"
   }
 }
