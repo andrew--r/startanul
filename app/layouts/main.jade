@@ -1,3 +1,5 @@
+include ../jade-tools/scripts
+
 include ../blocks/header/header
 include ../blocks/footer/footer
 
@@ -9,4 +11,4 @@ html(lang='ru')
 		block content
 		+footer()
 		
-		script(src='assets/scripts/build.js')
+		+scripts(['build.js'])
