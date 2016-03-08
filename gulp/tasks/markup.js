@@ -5,8 +5,8 @@ import jade         from 'gulp-jade';
 import inheritance  from 'gulp-jade-inheritance';
 import cached       from 'gulp-cached';
 import filter       from 'gulp-filter';
-import rename       from 'gulp-rename';
 import prettify     from 'gulp-html-prettify';
+import through      from 'through2';
 import errorHandler from '../utils/errorHandler';
 import paths        from '../paths';
 
@@ -30,6 +30,11 @@ gulp.task('markup', () => {
 			indent_inner_html: true,
 			preserve_newlines: true
 		}))
-		.pipe(rename({dirname: '.'}))
+		.pipe(through.obj(function(file, enc, next) {
+			const fixedFile = file.clone({contents: false});
+			fixedFile.path = file.path.replace(/pages[\/|\\]/g, '');
+			this.push(fixedFile);
+			next();
+		}))
 		.pipe(gulp.dest(paths.baseDist))
 });
